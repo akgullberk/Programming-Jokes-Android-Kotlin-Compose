@@ -1,6 +1,6 @@
 package com.example.programmingjokes.model
 
-class Joke(
+data class Joke(
     val error : Boolean,
     val category : String,
     val type : String,
@@ -14,7 +14,7 @@ class Joke(
 
 )
 
-class Flags(
+data class Flags(
     val nsfw : Boolean,
     val religious : Boolean,
     val political : Boolean,
