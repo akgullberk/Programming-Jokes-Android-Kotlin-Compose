@@ -22,7 +22,11 @@ class JokeViewModel : ViewModel() {
 
     val jokeList = mutableStateOf<List<Joke>>(listOf())
 
-    fun getJokes(){
+    init {
+        getJokes()
+    }
+
+    private fun getJokes(){
         viewModelScope.launch(Dispatchers.IO){
            jokeList.value =  retrofit.getData()
         }
